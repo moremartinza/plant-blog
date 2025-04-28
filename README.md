@@ -1,2 +1,8 @@
-# plant-blog
-Plant Blog is a simple web project designed to showcase basic Tailwind CSS layout and styling skills. It features a minimalist design for a plant enthusiast blog, focusing on responsive design and clean UI.
+# Plant Blog
+
+A simple project to practice using Tailwind CSS. This is a minimalist plant enthusiast blog with basic layout and styling.
+
+## Features
+- Basic plant-related blog design
+- Responsive layout using Tailwind CSS
+- Simple structure for learning purposes
