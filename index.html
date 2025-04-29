@@ -1,70 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <!-- Basic HTML settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Page information for search engines -->
+    <meta name="description" content="A blog about plants and gardening." />
+    <meta name="keywords" content="plants, gardening, blog, houseplants" />
+    <title>Plant Blog</title>
+
+    <!-- Favicon shown in the browser tab -->
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+
+    <!-- Tailwind CSS utility-first framework from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
+
+  <body class="bg-slate-50 text-slate-700 min-h-screen flex flex-col">
+    <!-- Site header with logo and navigation -->
+    <header class="bg-slate-800 text-slate-50 p-4 text-center">
       <section>
+        <!-- Plant logo SVG icon -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 164.56 162.44"
-          xmlns:v="https://vecta.io/nano"
           fill="white"
+          class="w-10 mx-auto"
         >
           <path
             d="M88.94 119.91v42.53H75.4V92.17c-26.58.24-47.78-9.8-62.83-31.49C.01 42.59-.81 21.91.41.47 20.12-.94 39.07.28 56.17 11.7c16.82 11.23 26.68 27.1 31.55 47.46 10.5-14.19 22.98-24.84 39.54-28.46 11.82-2.59 24.14-2.93 36.15-4.26 6.86 44.12-17.09 92.51-74.47 93.48zM14.33 14.31C12.4 48.23 36.69 81.49 75.09 77.17c1.17-36.65-25.68-64.07-60.76-62.86zm75.07 90.8c37.04.92 61.67-25.55 60.93-63.1-32.53-4.75-62.82 26.43-60.93 63.1z"
           />
         </svg>
       </section>
-      <nav>
+
+      <!-- Navigation links -->
+      <nav class="font-bold font-mono pt-3 space-x-4">
         <a href="#">Blog</a>
         <a href="#">Contact</a>
       </nav>
     </header>
 
-    <main>
-      <h2>Blog</h2>
+    <!-- Main content area -->
+    <main class="flex-grow">
+      <!-- Blog heading -->
+      <h2
+        class="text-center text-2xl font-bold my-6 font-mono uppercase tracking-widest"
+      >
+        Blog
+      </h2>
 
-      <!-- CARD CONTAINER -->
-      <section>
-        <!-- CARD -->
-        <section>
+      <!-- Blog card container -->
+      <section class="w-11/12 mx-auto mb-10">
+        <!-- Single blog card -->
+        <section class="w-80 bg-slate-200 mx-auto rounded-lg overflow-hidden">
+          <!-- Blog image -->
           <img
             src="./assets/img/post_houseplants.jpg"
             alt="Houseplants with Attitudes"
           />
 
-          <!-- CARD CONTENT -->
-          <section>
-            <!-- CARD HEADER -->
-            <section>
-              <section>
-                <section>
-                  <img
-                    src="./assets/img/author_fern.jpg"
-                    alt="Fern Greenleaf"
-                  />
-                  <span>Fern Greenleaf</span>
-                </section>
-                <svg height="20px" viewBox="0 -960 960 960" width="20px">
+          <!-- Blog content section -->
+          <section class="p-4">
+            <!-- Author and menu row -->
+            <section class="flex items-center justify-between mb-2">
+              <!-- Author profile -->
+              <section class="flex items-center gap-2">
+                <img
+                  class="w-8 rounded-full"
+                  src="./assets/img/author_fern.jpg"
+                  alt="Fern Greenleaf"
+                />
+                <span class="text-sm text-slate-600">Fern Greenleaf</span>
+              </section>
+
+              <!-- "More" icon menu -->
+              <section
+                class="flex items-center gap-1 text-slate-600 text-sm cursor-pointer"
+              >
+                <svg
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="currentColor"
+                >
                   <path
                     d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"
                   />
                 </svg>
-                <!-- <span>More options</span> -->
               </section>
             </section>
-            <!-- CARD HEADER END -->
 
-            <!-- CARD BODY -->
+            <!-- Blog title and paragraph -->
             <section>
-              <h2>
+              <h2 class="font-semibold text-xl mb-2 text-slate-700">
                 Houseplants with Attitude: Meet the Divas of Your Living Room
               </h2>
-              <p>
+              <p class="text-sm text-slate-500 leading-relaxed line-clamp-3">
                 If you thought your Monstera was just sitting quietly in the
                 corner, think again! These houseplants are full of sass, drama,
                 and demands. From diva-like Calatheas that throw a tantrum if
@@ -73,48 +105,57 @@
                 most dramatic members.
               </p>
             </section>
-            <!-- CARD BODY END -->
 
-            <hr />
-
-            <!-- CARD FOOTER -->
-            <section>
-              <span>9 likes</span>
+            <!-- Blog footer with likes -->
+            <section
+              class="flex items-center gap-2 text-sm text-slate-600 mt-2"
+            >
               <svg
+                class="cursor-pointer"
                 xmlns="http://www.w3.org/2000/svg"
                 height="20px"
                 viewBox="0 -960 960 960"
                 width="20px"
+                fill="currentColor"
               >
                 <path
                   d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"
                 />
               </svg>
-              <span>Like</span>
+              <span>23</span>
             </section>
-            <!-- CARD FOOTER END -->
           </section>
-          <!-- CARD CONTENT END -->
         </section>
-        <!-- CARD END -->
       </section>
-      <!--CARD CONTAINER END-->
     </main>
-    <footer>
-      <!-- FOOTER CONTENT -->
-      <section>
-        <h3>Subscribe</h3>
-        <p>
-          Want to get notified when a new blog post is up? Sign up for the
-          newsletter and never miss out!
-        </p>
-        <form>
-          <input type="email" placeholder="email@example.com" />
-          <input type="submit" value="Sign Up" />
-        </form>
-        <span>&copy; Fluffy McDuck</span>
-      </section>
+
+    <!-- Footer with newsletter signup -->
+    <footer class="bg-slate-800 text-slate-50 p-4 text-center">
+      <!-- Newsletter title -->
+      <h3 class="font-bold uppercase font-mono mb-4">Subscribe</h3>
+
+      <!-- Subscription text -->
+      <p>
+        Want to get notified when a new blog post is up? Sign up for the
+        newsletter and never miss out!
+      </p>
+
+      <!-- Email signup form -->
+      <form class="my-4 w-full flex">
+        <input
+          class="bg-slate-100 p-2 text-slate-900 pl-4 rounded-l-lg flex-grow"
+          type="email"
+          placeholder="email@example.com"
+        />
+        <input
+          class="bg-slate-400 text-slate-900 p-2 font-medium cursor-pointer rounded-r-lg"
+          type="submit"
+          value="Sign Up"
+        />
+      </form>
+
+      <!-- Copyright -->
+      <span class="text-xs font-mono">&copy; Fluffy McDuck</span>
     </footer>
-    <!-- FOOTER CONTENT END -->
   </body>
 </html>
